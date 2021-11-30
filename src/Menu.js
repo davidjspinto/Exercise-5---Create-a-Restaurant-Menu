@@ -1,20 +1,30 @@
 import React from 'react';
+import "./index.css";
 
 const Menu = ({menuItems}) => {
   
   return(
-    menuItems.map((item)=>{
-      const{id, title, category, price, img, desc} = item;
-      return(
-        <div key={id}>
-          <img className="photo" src={img} alt="" />
-          <p>{title}</p>
-          <p>{category}</p>
-          <p className="price">{price}</p>
-          <p>{desc}</p>
-        </div>
-      )
-    })
+    <div className="section-center">
+      {menuItems.map((item)=>{
+        const{id, title, price, img, desc} = item;
+        return(
+          <div className="menu-item" key={id}>
+            <div>
+            <img className="photo" src={img} alt="" />
+            </div>
+            <div>
+              <div className="item-info">
+                <h4>{title}</h4>
+                <p className="price">{price}</p>
+              </div>
+              <div className="item-text">
+                <p>{desc}</p>
+              </div>
+            </div>
+          </div>
+        )
+      })}
+    </div>
   );
 };
 

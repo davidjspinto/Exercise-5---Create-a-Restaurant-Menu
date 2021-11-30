@@ -4,14 +4,15 @@ import "./index.css";
 const Categories = ({menuCategories, handleCategory}) => {
 
 return (
-  menuCategories.map((btnCategory, index) => {
-  
-    return (
-      <div key={index}>
-          <button type="button" onClick={()=>handleCategory(btnCategory)} className="filter-btn">{btnCategory}</button>
-      </div>
-    );
-  })
+  <div className="btn-container">
+    {menuCategories.map((btnCategory, index) => {
+      return (
+        <div key={index}>
+            <button className="filter-btn" type="button" onClick={()=>handleCategory(btnCategory)} className="filter-btn">{btnCategory}</button>
+        </div>
+      );
+    })}
+  </div>
 )
 }
 

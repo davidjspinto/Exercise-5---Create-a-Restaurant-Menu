@@ -143,11 +143,10 @@ Menu
 */
 
 .menu {
-  padding: 5rem 0;
+  margin-top: 3rem;
 }
 .title {
   text-align: center;
-  margin-bottom: 2rem;
 }
 .underline {
   width: 5rem;
@@ -155,11 +154,13 @@ Menu
   background: var(--clr-gold);
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 15px;
 }
 .btn-container {
-  margin-bottom: 4rem;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  margin-bottom: 2.5rem;
 }
 .filter-btn {
   background: transparent;
@@ -199,9 +200,10 @@ Menu
   border-radius: var(--radius);
   display: block;
 }
-.item-info header {
+.item-info {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 0.5px dotted var(--clr-grey-5);
 }
 .item-info h4 {
